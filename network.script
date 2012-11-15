@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ "$1" = "init" ]; then
+#      echo "ifconfig up" $interface $ip
+      ifconfig $interface up
+elif [ "$1" = "config" ]; then
+#      echo ifconfig $interface $ip
+      ifconfig $interface $ip
+elif [ "$1" = "deconfig" ]; then
+#      echo ifconfig $interface down
+      ifconfig $interface down
+else
+      echo "ifconfig got no parameters"
+fi
